@@ -5,10 +5,20 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import { DiscussionEmbed } from "disqus-react"
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const { previous, next, markdownRemark } = data
+
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: {
+      identifier: markdownRemark.id,
+      title: markdownRemark.frontmatter.title,
+    },
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -33,6 +43,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <footer>
           <Bio />
         </footer>
+        <DiscussionEmbed {...disqusConfig} />
       </article>
       <nav className="blog-post-nav">
         <ul
