@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Eugene's Dev Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Eugene Francis R.`,
+      summary: `who lives and works in Quezon City building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A blog about random things Eugene experiences as a developer.`,
+    siteUrl: `https://efrdev.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `eugenefrancis_r`,
     },
   },
   plugins: [
